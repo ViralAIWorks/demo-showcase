@@ -79,7 +79,7 @@ function MilestonesPage() {
         <p>Swift thường được ghi nhận với việc tự viết hoặc đồng sáng tác các ca khúc. Từ năm 2021, loạt <em>Taylor’s Version</em> còn đưa quá trình tái thu âm các album cũ thành một phần nổi bật trong hành trình sáng tạo của cô.</p>
         <Link className="text-link" to="/albums#rerecordings">Tìm hiểu các bản tái thu âm <span aria-hidden="true">→</span></Link>
       </section>
-      <NextPage eyebrow="THAM KHẢO" to="/sources">Xem nguồn và ghi chú</NextPage>
+      <NextPage eyebrow="CẬP NHẬT" to="/news">Đọc bản tin âm nhạc</NextPage>
     </main>
   );
 }

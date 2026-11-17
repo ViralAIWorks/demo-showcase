@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import SiteFooter from "./components/SiteFooter.jsx";
 import SiteHeader from "./components/SiteHeader.jsx";
 import AlbumsPage from "./pages/AlbumsPage.jsx";
 import CareerPage from "./pages/CareerPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import MilestonesPage from "./pages/MilestonesPage.jsx";
-import SourcesPage from "./pages/SourcesPage.jsx";
+import NewsPage from "./pages/NewsPage.jsx";
 
 const pageMetadata = {
   "/": {
@@ -25,9 +25,9 @@ const pageMetadata = {
     title: "Dấu mốc — Taylor Swift",
     description: "Những dấu mốc nổi bật trong sự nghiệp Taylor Swift, từ giải GRAMMY đến The Eras Tour.",
   },
-  "/sources": {
-    title: "Nguồn tham khảo — Taylor Swift",
-    description: "Nguồn tham khảo và ghi chú biên tập cho website tóm tắt sự nghiệp Taylor Swift.",
+  "/news": {
+    title: "Tin tức — Taylor Swift",
+    description: "Những cập nhật và dấu mốc đáng chú ý trong âm nhạc của Taylor Swift.",
   },
 };
 
@@ -46,8 +46,6 @@ const animationGroups = [
   { selector: ".timeline-entry:nth-child(even)", name: "fadeInRight", stagger: 110 },
   { selector: ".album-row", name: "fadeInUp", stagger: 100 },
   { selector: ".milestone-card", name: "zoomIn", stagger: 110 },
-  { selector: ".source-row", name: "fadeInLeft", stagger: 100 },
-  { selector: ".wall-card", name: "fadeInUp", stagger: 100 },
   { selector: ".album-group-heading", name: "fadeInDown" },
   { selector: ".rerecord-section", name: "fadeIn" },
   { selector: ".next-page", name: "slideInUp" },
@@ -113,7 +111,8 @@ function App() {
         <Route path="/career" element={<CareerPage />} />
         <Route path="/albums" element={<AlbumsPage />} />
         <Route path="/milestones" element={<MilestonesPage />} />
-        <Route path="/sources" element={<SourcesPage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/sources" element={<Navigate to="/news" replace />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
       <SiteFooter />

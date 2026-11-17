@@ -6,7 +6,7 @@ const links = [
   { to: "/career", label: "Sự nghiệp" },
   { to: "/albums", label: "Album" },
   { to: "/milestones", label: "Dấu mốc" },
-  { to: "/sources", label: "Nguồn", source: true },
+  { to: "/news", label: "Tin tức", news: true },
 ];
 
 function SiteHeader() {
@@ -31,13 +31,13 @@ function SiteHeader() {
         <span className="sr-only">Mở menu</span><i /><i />
       </button>
       <nav className={`primary-nav${isOpen ? " is-open" : ""}`} id="primary-nav" aria-label="Điều hướng chính">
-        {links.map(({ to, label, end, source }) => (
+        {links.map(({ to, label, end, news }) => (
           <NavLink
             key={to}
             to={to}
             end={end}
             onClick={closeMenu}
-            className={({ isActive }) => `${source ? "nav-source " : ""}${isActive ? "is-current" : ""}`.trim()}
+            className={({ isActive }) => `${news ? "nav-news " : ""}${isActive ? "is-current" : ""}`.trim()}
             aria-current={location.pathname === to ? "page" : undefined}
           >
             {label}

@@ -117,7 +117,7 @@ function HomePage() {
 
       <section className="closing-note wrap">
         <p>Đây là bản tóm lược chọn lọc, không phải tiểu sử đầy đủ.</p>
-        <Link className="text-link" to="/sources">Xem nguồn tham khảo <span aria-hidden="true">→</span></Link>
+        <Link className="text-link" to="/news">Đọc bản tin âm nhạc <span aria-hidden="true">→</span></Link>
       </section>
     </main>
   );
