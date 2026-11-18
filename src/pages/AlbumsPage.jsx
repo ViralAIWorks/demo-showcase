@@ -54,7 +54,7 @@ function AlbumsPage() {
       <PageHero
         eyebrow="02 / DANH MỤC ÂM NHẠC"
         animation="fadeInDown"
-        description="Một hành trình từ country-pop đến pop, folk và những thử nghiệm âm thanh mới. Mô tả dưới đây là tóm lược, không trích lời bài hát."
+        description="Từ country-pop đến pop, folk và những thử nghiệm âm thanh mới — mỗi album mở ra một chặng đường khác."
       >
         <h1>Mười hai album.<br /><em>Nhiều sắc thái.</em></h1>
       </PageHero>
